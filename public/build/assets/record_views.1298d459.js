@@ -1,0 +1,1 @@
+import{a as i}from"./index.78af1e92.js";window.addEventListener("DOMContentLoaded",function(){setTimeout(function(){const t=location.href.split("/")[4];i.request({url:`/api/articles/${t}/view`,headers:{"X-Requested-With":"XMLHttpRequest"},withCredentials:!0}).then(e=>{document.querySelector("#views").innerHTML=e.data}).catch(e=>{}).then(()=>{})},5e3)},!1);
