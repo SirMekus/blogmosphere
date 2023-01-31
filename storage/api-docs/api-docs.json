@@ -1,0 +1,54 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Blogmosphere API",
+        "description": "API documentation for this task",
+        "contact": {
+            "email": "mekus600@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0",
+        "x-logo": {
+            "url": "https://via.placeholder.com/190x90.png?text=L5-Swagger"
+        }
+    },
+    "paths": {
+        "/api/articles": {
+            "get": {
+                "description": "Get all articles on the platform",
+                "operationId": "348fe1e32d90b776ffb8f188c8b92172",
+                "responses": {
+                    "200": {
+                        "description": "Returns all the articles"
+                    }
+                }
+            }
+        },
+        "/api/articles/{id}": {
+            "get": {
+                "description": "Read a particular article",
+                "operationId": "066cd3626d1ef05db93bccc0d639cb3b",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of article to be viewed",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns the entire article of a particular article"
+                    }
+                }
+            }
+        }
+    }
+}

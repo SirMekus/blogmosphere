@@ -9,7 +9,8 @@ class ArticleController extends Controller
     /**
      * @OA\Get(
      *     path="/api/articles",
-     *     @OA\Response(response="200", description="An example endpoint")
+     *     description="Get all articles on the platform",
+     *     @OA\Response(response="200", description="Returns all the articles")
      * )
      */
 
@@ -20,6 +21,23 @@ class ArticleController extends Controller
         return request()->wantsJson() ? $articles : view('articles', ['articles' => $articles]);
     }
 
+    /**
+     * @OA\Get(
+     *     path="/api/articles/{id}",
+     *     description="Read a particular article",
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         description="ID of article to be viewed",
+     *         required=true,
+     *         @OA\Schema(
+     *             type="integer",
+     *             format="int64"
+     *         )
+     *     ),
+     *     @OA\Response(response="200", description="Returns the entire article of a particular article")
+     * )
+     */
     public function article($id)
     {
         $article = Article::withCount('likes')
