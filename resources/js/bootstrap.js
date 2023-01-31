@@ -1,4 +1,4 @@
-import { registerEventListeners, lazyLoadImages } from "mmuo"
+import { on, registerEventListeners, lazyLoadImages } from "mmuo"
 import * as bootstrap from '~bootstrap';
 import axios from 'axios';
 
@@ -15,6 +15,12 @@ window.addEventListener("DOMContentLoaded", function() {
     document.addEventListener('like', (response) => {
         document.querySelector("#likes").innerHTML = response.detail.data;
     });
+
+    on('#comment', 'click', function(event){
+        event.preventDefault();
+        const element = document.getElementById("form");
+        element.scrollIntoView();
+    })
     
 }, false);
 

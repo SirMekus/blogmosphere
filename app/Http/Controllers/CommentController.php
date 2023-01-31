@@ -36,12 +36,12 @@ class CommentController extends Controller
      *                 type="object",
      *                 @OA\Property(
      *                     property="name",
-     *                     description="name of person making the comment",
+     *                     description="name of user making the comment",
      *                     type="string",
      *                 ),
      *                 @OA\Property(
      *                     property="email",
-     *                     description="Email address of the person making the comment.",
+     *                     description="Email address of the user making the comment.",
      *                     type="string",
      *                 ),
      *                 @OA\Property(

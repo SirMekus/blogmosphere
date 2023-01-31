@@ -32,7 +32,7 @@
 
                 <div class='card-footer d-flex justify-content-center'>
                     <a class="btn btn-lg bg-primary text-white" href="#">Like</a>
-                    <a class="btn btn-lg bg-dark text-white ms-2" href="#">Comment</a>
+                    <a class="btn btn-lg bg-dark text-white ms-2" id="comment" href="#">Comment</a>
                 </div>
 
             </div>

@@ -9,3 +9,5 @@ On your local machine:
 1. Seed the database by running `php artisan db:seed --class=ArticleSeeder`.
 1. Seed the database by running `php artisan db:seed --class=TagSeeder`.
 1. Run `php artisan storage:link`
+
+> visit http://localhost/api/documentation for complete API documentation

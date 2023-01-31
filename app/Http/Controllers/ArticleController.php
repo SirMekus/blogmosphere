@@ -17,7 +17,7 @@ class ArticleController extends Controller
     {
         $articles = Article::orderBy('created_at', 'desc')->paginate(10);
 
-        return request()->wantsJson() ? $articles : view('articles', ['articles' => $articles]);
+        return request()->ajax() ? $articles : view('articles', ['articles' => $articles]);
     }
 
     /**
@@ -44,7 +44,7 @@ class ArticleController extends Controller
                 $query->orderBy('created_at', 'desc');
             }, 'tags'])->findOrFail($id);
 
-        return request()->wantsJson() ? $article : view('blog', ['article' => $article]);
+        return request()->ajax() ? $article : view('blog', ['article' => $article]);
     }
 
     /**
