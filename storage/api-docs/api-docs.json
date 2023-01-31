@@ -49,6 +49,29 @@
                     }
                 }
             }
+        },
+        "/api/articles/{id}/view": {
+            "get": {
+                "description": "Increments number of views for a particular article",
+                "operationId": "1f369a9764d12909e044cc19c61f366e",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of article to increment its view",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns an integer which represents the updated number of views for the article"
+                    }
+                }
+            }
         }
     }
 }
